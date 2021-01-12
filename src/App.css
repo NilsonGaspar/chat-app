@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,500&display=swap");
+
+:root {
+  --bg-color: #f3f3f3;
+  --primary-color: #eeeeee;
+  --secondary-color: #eeeeee;
+  --complementary-color: #ffffff;
+  --font-color: #f1f1f1;
+  --hover-color: #f5f5f5;
+  --msg-color: #0f69bd;
+  --border-color: #e2e2e2;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: rgb(15, 105, 189);
+  background: linear-gradient(0deg, rgba(15, 105, 189, 1) 0%, rgba(107, 49, 160, 1) 100%);
+}
+
+.app {
+  display: flex;
+  height: 90vh;
+  width: 90vw;
+  max-width: 1440px;
+  box-shadow: 0 1px 1px #dadada;
+}
+
+@media (max-width: 1440px) {
+  .app {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+.chatroom {
+  flex: 1;
+}
+
+.material__icons__white,
+.material__icons__grey {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}

@@ -1,0 +1,140 @@
+.chatroom {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+@media (max-width: 700px) {
+  .chatroom.inactive {
+    display: none;
+  }
+}
+
+.chatroom__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: var(--primary-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Arrorw back icon */
+.material__icons__grey.setDisplay {
+  display: none;
+}
+
+.chatroom__header__info {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.chatroom__header__avatar {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.chatroom__header__name {
+  font-size: 17px;
+}
+
+.chatroom__header__buttons {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.chatroom__body {
+  flex: 1;
+  overflow-y: auto;
+  background-color: var(--bg-color);
+  padding: 20px 30px;
+}
+
+.chatroom__body::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.chatroom__body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.chatroom__footer {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  background-color: var(--primary-color);
+  border-top: 1px solid var(--border-color);
+}
+
+.chatroom__footer__left {
+  display: flex;
+  margin: 0 10px;
+}
+
+.chatroom__footer__input {
+  flex: 1;
+}
+
+.chatroom__input {
+  outline: 0;
+  border: 0;
+  height: 40px;
+  width: 100%;
+  background-color: #ffffff;
+  font-size: 15px;
+  border-radius: 20px;
+  padding-left: 15px;
+}
+
+.chatroom__footer__right {
+  display: flex;
+  margin: 0 15px;
+}
+
+.chatroom__emoji__body {
+  display: none;
+  overflow-y: hidden;
+  transition: all ease 0.3s;
+  height: 0;
+}
+
+.chatroom__emoji__body.active {
+  display: block;
+  height: 250px;
+}
+
+.chatroom__emoji__body > aside.emoji-picker-react {
+  width: 100%;
+  background-color: var(--complementary-color);
+}
+
+.chatroom__emoji__body > .emoji-picker-react .emoji-group:before,
+input {
+  background-color: var(--complementary-color);
+}
+
+/* change color when emoji tab is opened */
+.material__icons__grey.active > .MuiSvgIcon-root {
+  color: var(--msg-color);
+}
+
+@media (max-width: 700px) {
+  .chatroom.active {
+    display: flex;
+  }
+  .chatroom__header__avatar {
+    margin-left: 0;
+  }
+
+  /* Arrorw back icon */
+  .chatroom__header__info > .material__icons__grey > .MuiSvgIcon-root {
+    margin-left: 15px;
+  }
+  /* Arrorw back icon */
+  .material__icons__grey.setDisplay {
+    display: flex;
+  }
+}
